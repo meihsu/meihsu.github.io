@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        html,
+        body {
+            background-color: #F4EDDF;
+        }
+
+        .logo {
+            width: 160px;
+            height: 100px;
+            margin: 20px auto 10px auto;
+        }
+
+        .nav {
+            width: 100%;
+        }
+
+        .nav ul {
+            margin: 0 auto;
+        }
+
+        .nav ul li {
+            position: relative;
+            list-style: none;
+            display: inline-block;
+            font-size: 28px;
+            padding: 0 20px;
+        }
+
+        .nav ul li::after {
+            content: "";
+            width: 2px;
+            height: 30px;
+            background-color: #000;
+            position: absolute;
+            top: 8px;
+            left: -2px;
+        }
+
+        .nav ul li:nth-child(1)::after {
+            display: none;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .bgc-img {
+            height: 60vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pic {
+            background-image: url(img/index.jpg);
+        }
+
+        .pic2 {
+            background-image: url(img/index3.jpg);
+        }
+
+        .pic3 {
+            background-image: url(img/index2.jpg);
+        }
+
+        .section1 {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .card-text {
+            font-size: 18px;
+        }
+
+        .card-body {
+            text-align: left;
+        }
+
+        .btn-primary {
+            margin: 0 auto;
+        }
+
+        .commodity,
+        .service,
+        .lowerclass {
+
+            margin: 0 auto;
+            background-color: #F4EDDF;
+        }
+
+        .commodity {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service {
+            max-width: 1140px;
+            margin: 30px auto 50px auto;
+        }
+
+        .service h5 {
+            font-weight: bolder;
+        }
+
+        .flowerclass {
+            margin: 30px auto 50px auto;
+            text-align: center;
+        }
+
+        #banner {
+            width: 100%;
+            height: 500px;
+            background-image: url('img/banner.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #banner2 {
+            width: 100%;
+            height: 500px;
+            background-image: url('img/banner2.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #banner3 {
+            width: 100%;
+            height: 500px;
+            background-image: url('img/banner3.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .section3 {
+            max-width: 1140px;
+            margin: 30px auto 50px auto;
+        }
+
+        .flowerclass h5 {
+            background-color: #92CA89;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            width: 50%;
+            padding: 10px 0;
+            margin: 0 auto;
+            transform: translateY(20px);
+        }
+
+        .flowerclass p {
+            color: blue;
+            font-size: 24px;
+        }
+
+        .classcard {
+            padding: 20px 20px 30px 20px;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        .section4 {
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        .information {}
+
+        .googlemap {}
+
+        .top {
+            width: 100%;
+            background-color: #9FA0A0;
+        }
+
+        .top ul {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .top ul li {
+            position: relative;
+            list-style: none;
+            display: inline-block;
+            font-size: 21px;
+            padding: 10px 20px;
+        }
+
+        .bottom {
+            width: 100%;
+            background-color: #595757;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .bottom p {
+            margin-bottom: 8px
+        }
+
+        .commodity h5 {
+            text-align: center;
+        }
+
+        .flcard mb-3 {
+            background-color: transparent;
+            border: none;
+        }
+
+        .flcard-body {
+            padding: 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img class="img-fluid" src="img/logo1.png" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="#">首頁</a>
+                </li>
+                <li>
+                    <a href="#news">最新消息</a>
+                </li>
+                <li>
+                    <a href="#com">商品總覽</a>
+                </li>
+                <li>
+                    <a href="#flower">花藝教室</a>
+                </li>
+                <li>
+                    <a href="#about">關於弎學</a>
+                </li>
+                <li>
+                    <a href="#sec">連絡我們</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="bgc-img pic"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bgc-img pic2"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="bgc-img pic3"></div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div id=news class="section1">
+        <h3>最新消息
+            <h3>
+                <p style="color:red">金耀暖春．新年鮮花花禮 預購期間:即日起至02/04(日) 18:00止 </p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <h5 class="card-title">款式A</h5>
+                                    <p class="card-text">尺寸：12cmX12cmX20cm</p>
+                                    <p class="card-text">價格：880元（正方純白瓷器）</p>
+                                </div>
+                                <img class="card-img-top" src="img/a.jpg" alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <h5 class="card-title">款式B</h5>
+                                    <p class="card-text">尺寸：19cmX14cmX25cm</p>
+                                    <p class="card-text">價格：1080元 (圓形提籃）</p>
+
+                                </div>
+                                <img class="card-img-top" src="img/b.jpg" alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <h5 class="card-title">款式C</h5>
+                                    <p class="card-text">尺寸：18cmX14cmX25cm</p>
+                                    <p class="card-text">價格：1080元 (方形提籃）</p>
+
+                                </div>
+                                <img class="card-img-top" src="img/c.jpg" alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <h5 class="card-title">款式D</h5>
+                                    <p class="card-text">尺寸：18cmX9cmX26cm</p>
+                                    <p class="card-text">價格：1380元（長方純白瓷器）</p>
+
+                                </div>
+                                <img class="card-img-top" src="img/d.jpg" alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <h5 class="card-title">款式E</h5>
+                                    <p class="card-text">尺寸：17cmX17cmX25cm</p>
+                                    <p class="card-text">價格：1680元（圓形純白瓷器）</p>
+                                </div>
+                                <img class="card-img-top" src="img/e.jpg" alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <h5 class="card-title">款式F</h5>
+                                    <p class="card-text">尺寸：28cmX9cmX25cm</p>
+                                    <p class="card-text">價格：1980元（長方純白瓷器）</p>
+                                </div>
+                                <img class="card-img-top" src="img/f.jpg" alt="Card image cap">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary">我要訂購</button>
+    </div>
+
+    <div class="section2">
+        <div id="banner"></div>
+        <div id=com class="commodity">
+            <h3>商品總覽</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">玻璃花罩</h5>
+                                <a href="img/flower.jpg" data-lightbox="image-1" data-title="My caption">
+                                    <img class="card-img-top" src="img/flower.jpg" alt="Card image cap">
+                                </a>
+                                <a style="display:none;" href="img/pl2.jpg" data-lightbox="image-1" data-title="捧花"></a>
+                                <a style="display:none;" href="img/pl3.jpg" data-lightbox="image-1" data-title="捧花"></a>
+                                <a style="display:none;" href="img/pl4.jpg" data-lightbox="image-1" data-title="捧花"></a>
+                                <a style="display:none;" href="img/pl5.jpg" data-lightbox="image-1" data-title="捧花"></a>
+                                <a style="display:none;" href="img/pl6.jpg" data-lightbox="image-1" data-title="捧花"></a>
+                                <a style="display:none;" href="img/pl7.jpg" data-lightbox="image-1" data-title="捧花"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">情人節花束/花禮</h5>
+                                <a href="img/loveA.jpg" data-lightbox="image-2" data-title="A款:藍色文法.價格:1380元">
+                                    <img class="card-img-top" src="img/loveA.jpg" alt="Card image cap">
+                                </a>
+                                <a style="display:none;" href="img/loveB.jpg" data-lightbox="image-2" data-title="B款:粉色邏輯.價格:1380元"></a>
+                                <a style="display:none;" href="img/loveC.jpg" data-lightbox="image-2" data-title="A款:銀白修辭.價格:1380元"></a>
+                                <a style="display:none;" href="img/loveD.jpg" data-lightbox="image-2" data-title="A款:紅色敘事.價格:1380元"></a>
+                                <a style="display:none;" href="img/lovebox.jpg" data-lightbox="image-2" data-title="玻璃罩永生花一組+泰國品牌 Headman studio 飾品一件"></a>
+                                <a style="display:none;" href="img/lovebox2.jpg" data-lightbox="image-2" data-title="玻璃罩永生花一組+泰國品牌 Headman studio 飾品一件"></a>
+                                <a style="display:none;" href="img/lovebox3.jpg" data-lightbox="image-2" data-title="玻璃罩永生花一組+泰國品牌 Headman studio 飾品一件"></a>
+                                <a style="display:none;" href="img/lovebox4.jpg" data-lightbox="image-2" data-title="玻璃罩永生花一組+泰國品牌 Headman studio 飾品一件"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">客製化婚禮花藝</h5>
+                                <a href="img/weding.jpg" data-lightbox="image-3" data-title="My caption">
+                                    <img class="card-img-top" src="img/weding.jpg" alt="Card image cap">
+                                </a>
+                                <a style="display:none;" href="img/weding2.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding3.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding4.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding5.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding6.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding7.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding8.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding9.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding10.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding11.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding12.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                                <a style="display:none;" href="img/weding13.jpg" data-lightbox="image-3" data-title="捧花"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">裝置花藝</h5>
+                            </div>
+                            <img class="card-img-top" src="img/d.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">多肉盆栽</h5>
+                                <a href="img/rou.jpg" data-lightbox="image-5" data-title="My caption">
+                                    <img class="card-img-top" src="img/rou.jpg" alt="Card image cap">
+                                </a>
+                                <a style="display:none;" href="img/rou2.jpg" data-lightbox="image-5" data-title="捧花"></a>
+                                <a style="display:none;" href="img/rou3.jpg" data-lightbox="image-5" data-title="捧花"></a>
+                                <a style="display:none;" href="img/rou4.jpg" data-lightbox="image-5" data-title="捧花"></a>
+                                <a style="display:none;" href="img/rou5.jpg" data-lightbox="image-5" data-title="捧花"></a>
+                                <a style="display:none;" href="img/rou6.jpg" data-lightbox="image-5" data-title="藤圈上的多肉"></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">其它</h5>
+                            </div>
+                            <img class="card-img-top" src="img/f.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="banner2"></div>
+        <div class="service">
+            <h5>服務項目</h5>
+            <p>植物文法：小品療癒系盆栽設計製作</p>
+            <p>花材邏輯：花束、花禮、乾燥花擺飾客製服務</p>
+            <p>生活修辭：空間花藝植栽規劃、婚禮佈置，乾燥花、鮮花、盆栽等系列手作體驗</p>
+            <h5>服務說明</h5>
+            <p>1.歡迎至門市選購， 客製服務在雙向溝通討論後，依您的預算、需求製作</p>
+            <ul>
+                <li>結婚、外拍捧花：2500起（含一副胸花）。</li>
+                <li>植栽花禮：1500起。</li>
+                <li>鮮花花束：1000起。</li>
+                <li>客製花禮：依討論後報價。</li>
+                <li>婚禮佈置：50000起（台中地區）其它區域依討論後報價。</li>
+            </ul>
+            <p>2.因人力有限，客製化作品敬請來店自取；若時間許可，臺中市西區平日可代送。</p>
+            <p>3.手作體驗項目：乾燥花擺飾（花圈、相框、容器、花束等）鮮花製作（手綁花束、居家花藝設計） 盆栽組合（多肉、室內、水生植物栽種組合）
+            </p>
+            <p>4.手作體驗課程不定期開課，請注意FB粉絲頁開課訊息；四人以上自行組團可依喜好，另開專班體驗</p>
+        </div>
+        <div id="banner3"></div>
+
+        <div id=flower class="flowerclass">
+            <h4>花藝教室</h4>
+            <p style="text-align: center;">1月花藝課報名中</p>
+            <p style="text-align: center;">體會永恆的象徵，感受純淨的組合，用各種藍色開啟2018</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-12">
+                        <div class="flcard mb-3">
+                            <div class="flcard-body">
+                                <h5 class="card-title">課程A 透藍的瓶子</h5>
+                            </div>
+                            <img class="card-img-top" src="img/class-a.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-12">
+                        <div class="flcard mb-3">
+                            <div class="flcard-body">
+                                <h5 class="card-title">課程B 深藍淺藍的詩句</h5>
+                            </div>
+                            <img class="card-img-top" src="img/class-b.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-12">
+                        <div class="flcard mb-3">
+                            <div class="flcard-body">
+                                <h5 class="card-title">課程C 天空-藍</h5>
+                            </div>
+                            <img class="card-img-top" src="img/class-c.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-12">
+                        <div class="flcard mb-3">
+                            <div class="flcard-body">
+                                <h5 class="card-title">課程D 週末植感晨間</h5>
+                            </div>
+                            <img class="card-img-top" src="img/class-d.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary">觀看詳情報名去</button>
+            </div>
+        </div>
+
+        <div id=about class="section3">
+            <h3>關於弎學</h3>
+            <p>弎學植務所」成立時間於 2014年2月14日,是從事藝術教育及環境規劃工作的二個人所成立， 為了呈現創作屬性及融入個人特質，將「事務所」轉化為「植務所」。無意中發現「弎」（音義同「三」）這個充滿設計感的古字，恰巧可以與植物生存三要素「陽光、空氣、水」結合，於是決定將其應用於命名。就在苦思究竟是「弎○」或是「○弎」的時候，又無意中在書上發現涵蓋修辭、邏輯、文法這三門學問的「西方三學」（trivium）這個詞，於是「弎學植務所」誕生了,
+                我們也賦予「弎學」新的意義：植物文法‧花材邏輯‧生活修辭。
+            </p>
+        </div>
+
+        <div id=sec class="section4">
+            <h3>聯絡我們</h3>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="information">
+                        <h5>開放時間：
+                            <p>週一～週日 10:00-18:00（週三店休）</p>
+                        </h5>
+                        <h5>聯絡資訊:
+                            <p>電話:0927 567 725</p>
+                            <p>信箱:3.trivium@gmail.com</p>
+                            <p>地址:台中市西區向上南路一段33號</p>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="googlemap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.7284684104825!2d120.65882441457057!3d24.1461721843958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693da1e2af703f%3A0x95db18f610526900!2zNDAz5Y-w5Lit5biC6KW_5Y2A5ZCR5LiK5Y2X6Lev5LiA5q61MzPomZ8!5e0!3m2!1szh-TW!2stw!4v1516938269451"
+                            width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="footer">
+            <div class="top">
+                <ul>
+                    <li>首頁</li>
+                    <li>最新消息</li>
+                    <li>商品總覽</li>
+                    <li>花藝教室</li>
+                    <li>關於弎學</li>
+                    <li>聯絡我們</li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <div class="icon">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <i class="fab fa-line fa-2x"></i>
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                </div>
+                <p>0927 567 725</p>
+                <p>台中市西區向上南路一段33號</p>
+                <p>Copyrights © 2018 弎學植務所 All Rights Reserved.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+</body>
+
+</html>
