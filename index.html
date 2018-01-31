@@ -101,6 +101,27 @@
             align-items: center;
         }
 
+        .swiper-button-next,
+        .swiper-container-rtl .swiper-button-prev {
+            background-image: none;
+        }
+
+        .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
+            background-image: none;
+        }
+
+        .swiper-button-prev,.swiper-button-next {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+      
+        .swiper-button-prev > i,.swiper-button-next > i{
+            color:red;
+        }
+        .swiper-pagination-bullet-active{
+            background: white;
+        }
         .bgc-img {
             height: 60vh;
             width: 100%;
@@ -220,11 +241,12 @@
             font-size: 24px;
         }
 
+        /* 
         .classcard {
             padding: 20px 20px 30px 20px;
             width: 80%;
             border-radius: 5px;
-        }
+        } */
 
         .section4 {
             max-width: 1140px;
@@ -327,6 +349,7 @@
             } */
         }
 
+
         @media screen and (max-width:576px) {
             #banner {
                 display: none;
@@ -372,7 +395,6 @@
             .information p {
                 font-size: 17px;
             }
-
         }
     </style>
 </head>
@@ -413,7 +435,6 @@
             </div>
         </nav>
     </div>
-
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -430,86 +451,89 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
         <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next">
+            <i class="fas fa-chevron-right fa-3x"></i>
+        </div>
+        <div class="swiper-button-prev">
+            <i class="fas fa-chevron-left fa-3x"></i>
+        </div>
     </div>
 
-    <div id=news class="section1">
-        <h3>最新消息
-            <h3>
-                <p style="color:red">金耀暖春．新年鮮花花禮 預購期間:即日起至02/04(日) 18:00止 </p>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="card mb-5">
-                                <div class="card-body">
-                                    <h5 class="card-title">款式A</h5>
-                                    <p class="card-text">尺寸：12cmX12cmX20cm</p>
-                                    <p class="card-text">價格：880元（正方純白瓷器）</p>
-                                    <img class="card-img-top" src="img/a.jpg" alt="Card image cap">
-                                </div>
-
-                            </div>
+    <div id="news" class="section1">
+        <h3>最新消息</h3>
+        <p style="color:red">金耀暖春．新年鮮花花禮 預購期間:即日起至02/04(日) 18:00止 </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">款式A</h5>
+                            <p class="card-text">尺寸：12cmX12cmX20cm</p>
+                            <p class="card-text">價格：880元（正方純白瓷器）</p>
+                            <img class="card-img-top" src="img/a.jpg" alt="Card image cap">
                         </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="card mb-5">
-                                <div class="card-body">
-                                    <h5 class="card-title">款式B</h5>
-                                    <p class="card-text">尺寸：19cmX14cmX25cm</p>
-                                    <p class="card-text">價格：1080元 (圓形提籃）</p>
-                                    <img class="card-img-top" src="img/b.jpg" alt="Card image cap">
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="card mb-5">
-                                <div class="card-body">
-                                    <h5 class="card-title">款式C</h5>
-                                    <p class="card-text">尺寸：18cmX14cmX25cm</p>
-                                    <p class="card-text">價格：1080元 (方形提籃）</p>
-                                    <img class="card-img-top" src="img/c.jpg" alt="Card image cap">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="card mb-5">
-                                <div class="card-body">
-                                    <h5 class="card-title">款式D</h5>
-                                    <p class="card-text">尺寸：18cmX9cmX26cm</p>
-                                    <p class="card-text">價格：1380元（長方純白瓷器）</p>
-                                    <img class="card-img-top" src="img/d.jpg" alt="Card image cap">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="card mb-5">
-                                <div class="card-body">
-                                    <h5 class="card-title">款式E</h5>
-                                    <p class="card-text">尺寸：17cmX17cmX25cm</p>
-                                    <p class="card-text">價格：1680元（圓形純白瓷器）</p>
-                                    <img class="card-img-top" src="img/e.jpg" alt="Card image cap">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="card mb-5">
-                                <div class="card-body">
-                                    <h5 class="card-title">款式F</h5>
-                                    <p class="card-text">尺寸：28cmX9cmX25cm</p>
-                                    <p class="card-text">價格：1980元（長方純白瓷器）</p>
-                                    <img class="card-img-top" src="img/f.jpg" alt="Card image cap">
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSduHFuC6EJm-ZQMNpDwob-XX7ixILEPQijW8fug7GX_KYvMng/viewform "
-                    target="_blank">我要訂購</a>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">款式B</h5>
+                            <p class="card-text">尺寸：19cmX14cmX25cm</p>
+                            <p class="card-text">價格：1080元 (圓形提籃）</p>
+                            <img class="card-img-top" src="img/b.jpg" alt="Card image cap">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">款式C</h5>
+                            <p class="card-text">尺寸：18cmX14cmX25cm</p>
+                            <p class="card-text">價格：1080元 (方形提籃）</p>
+                            <img class="card-img-top" src="img/c.jpg" alt="Card image cap">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">款式D</h5>
+                            <p class="card-text">尺寸：18cmX9cmX26cm</p>
+                            <p class="card-text">價格：1380元（長方純白瓷器）</p>
+                            <img class="card-img-top" src="img/d.jpg" alt="Card image cap">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">款式E</h5>
+                            <p class="card-text">尺寸：17cmX17cmX25cm</p>
+                            <p class="card-text">價格：1680元（圓形純白瓷器）</p>
+                            <img class="card-img-top" src="img/e.jpg" alt="Card image cap">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">款式F</h5>
+                            <p class="card-text">尺寸：28cmX9cmX25cm</p>
+                            <p class="card-text">價格：1980元（長方純白瓷器）</p>
+                            <img class="card-img-top" src="img/f.jpg" alt="Card image cap">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSduHFuC6EJm-ZQMNpDwob-XX7ixILEPQijW8fug7GX_KYvMng/viewform "
+            target="_blank">我要訂購</a>
     </div>
 
     <div class="section2">
@@ -517,7 +541,7 @@
         <div id="phobanner">
             <img src="img/banner.jpg" alt="">
         </div>
-        <div id=com class="commodity">
+        <div id="com" class="commodity">
             <h3>商品總覽</h3>
             <div class="container">
                 <div class="row">
@@ -664,7 +688,7 @@
             <img src="img/banner3.jpg" alt="">
         </div>
 
-        <div id=flower class="flowerclass">
+        <div id="flower" class="flowerclass">
             <h3>花藝教室</h3>
             <p style="text-align: center;">1月花藝課報名中</p>
             <p style="text-align: center;">體會永恆的象徵，感受純淨的組合，用各種藍色開啟2018</p>
@@ -708,14 +732,14 @@
             </div>
         </div>
 
-        <div id=about class="section3">
+        <div id="about" class="section3">
             <h3>關於弎學</h3>
             <p>弎學植務所」成立時間於 2014年2月14日,是從事藝術教育及環境規劃工作的二個人所成立， 為了呈現創作屬性及融入個人特質，將「事務所」轉化為「植務所」。無意中發現「弎」（音義同「三」）這個充滿設計感的古字，恰巧可以與植物生存三要素「陽光、空氣、水」結合，於是決定將其應用於命名。就在苦思究竟是「弎○」或是「○弎」的時候，又無意中在書上發現涵蓋修辭、邏輯、文法這三門學問的「西方三學」（trivium）這個詞，於是「弎學植務所」誕生了,
                 我們也賦予「弎學」新的意義：植物文法‧花材邏輯‧生活修辭。
             </p>
         </div>
 
-        <div id=sec class="section4">
+        <div id="sec" class="section4">
             <h3>聯絡我們</h3>
             <div class="row">
                 <div class="col-md-6 col-12">
@@ -795,12 +819,18 @@
             }
         });
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
             spaceBetween: 30,
-            loop: true,
+            centeredSlides: true,
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -808,10 +838,6 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
             },
         });
     </script>
