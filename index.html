@@ -105,7 +105,7 @@
             height: 60vh;
             width: 100%;
             background-size: cover;
-            background-position: center;
+            background-position: 100% 0;
         }
 
         .pic {
@@ -174,6 +174,7 @@
             background-image: url('img/banner.jpg');
             background-attachment: fixed;
             background-size: cover;
+            background-position: 100% 0;
         }
 
         #banner2 {
@@ -182,6 +183,7 @@
             background-image: url('img/banner2.jpg');
             background-attachment: fixed;
             background-size: cover;
+            background-position: 100% 0;
         }
 
         #banner3 {
@@ -190,6 +192,7 @@
             background-image: url('img/banner3.jpg');
             background-attachment: fixed;
             background-size: cover;
+            background-position: 100% 0;
         }
 
         .section3 {
@@ -283,11 +286,21 @@
         #phobanner {
             display: none;
         }
+
         #phobanner2 {
             display: none;
         }
+
         #phobanner3 {
             display: none;
+        }
+
+        .card {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .card-img-top {
+            border-radius: 3px;
         }
 
         @media screen and (max-width:992px) {
@@ -325,16 +338,39 @@
                 display: none;
             }
             #phobanner {
-                width: 100%;
+
                 display: block;
+            }
+            #phobanner img {
+                width: 100%;
+
             }
             #phobanner2 {
-                width: 100%;
+
                 display: block;
             }
-            #phobanner3 {
+            #phobanner2 img {
                 width: 100%;
+
+            }
+            #phobanner3 {
                 display: block;
+            }
+            #phobanner3 img {
+                width: 100%;
+            }
+            .service {
+                padding: 0 15px;
+            }
+            #about p {
+                padding: 0 15px;
+            }
+            .information {
+                padding: 0 15px;
+
+            }
+            .information p {
+                font-size: 17px;
             }
 
         }
@@ -410,8 +446,9 @@
                                     <h5 class="card-title">款式A</h5>
                                     <p class="card-text">尺寸：12cmX12cmX20cm</p>
                                     <p class="card-text">價格：880元（正方純白瓷器）</p>
+                                    <img class="card-img-top" src="img/a.jpg" alt="Card image cap">
                                 </div>
-                                <img class="card-img-top" src="img/a.jpg" alt="Card image cap">
+
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-12">
@@ -420,8 +457,9 @@
                                     <h5 class="card-title">款式B</h5>
                                     <p class="card-text">尺寸：19cmX14cmX25cm</p>
                                     <p class="card-text">價格：1080元 (圓形提籃）</p>
+                                    <img class="card-img-top" src="img/b.jpg" alt="Card image cap">
                                 </div>
-                                <img class="card-img-top" src="img/b.jpg" alt="Card image cap">
+
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-12">
@@ -430,8 +468,9 @@
                                     <h5 class="card-title">款式C</h5>
                                     <p class="card-text">尺寸：18cmX14cmX25cm</p>
                                     <p class="card-text">價格：1080元 (方形提籃）</p>
+                                    <img class="card-img-top" src="img/c.jpg" alt="Card image cap">
                                 </div>
-                                <img class="card-img-top" src="img/c.jpg" alt="Card image cap">
+
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-12">
@@ -440,8 +479,9 @@
                                     <h5 class="card-title">款式D</h5>
                                     <p class="card-text">尺寸：18cmX9cmX26cm</p>
                                     <p class="card-text">價格：1380元（長方純白瓷器）</p>
+                                    <img class="card-img-top" src="img/d.jpg" alt="Card image cap">
                                 </div>
-                                <img class="card-img-top" src="img/d.jpg" alt="Card image cap">
+
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-12">
@@ -450,8 +490,9 @@
                                     <h5 class="card-title">款式E</h5>
                                     <p class="card-text">尺寸：17cmX17cmX25cm</p>
                                     <p class="card-text">價格：1680元（圓形純白瓷器）</p>
+                                    <img class="card-img-top" src="img/e.jpg" alt="Card image cap">
                                 </div>
-                                <img class="card-img-top" src="img/e.jpg" alt="Card image cap">
+
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-12">
@@ -460,8 +501,9 @@
                                     <h5 class="card-title">款式F</h5>
                                     <p class="card-text">尺寸：28cmX9cmX25cm</p>
                                     <p class="card-text">價格：1980元（長方純白瓷器）</p>
+                                    <img class="card-img-top" src="img/f.jpg" alt="Card image cap">
                                 </div>
-                                <img class="card-img-top" src="img/f.jpg" alt="Card image cap">
+
                             </div>
                         </div>
                     </div>
@@ -623,7 +665,7 @@
         </div>
 
         <div id=flower class="flowerclass">
-            <h4>花藝教室</h4>
+            <h3>花藝教室</h3>
             <p style="text-align: center;">1月花藝課報名中</p>
             <p style="text-align: center;">體會永恆的象徵，感受純淨的組合，用各種藍色開啟2018</p>
             <div class="container">
@@ -679,9 +721,11 @@
                 <div class="col-md-6 col-12">
                     <div class="information">
                         <h5>開放時間：
+                            <p></p>
                             <p>週一～週日 10:00-18:00（週三店休）</p>
                         </h5>
                         <h5>聯絡資訊:
+                            <p></p>
                             <p>電話:0927 567 725</p>
                             <p>信箱:3.trivium@gmail.com</p>
                             <p>地址:台中市西區向上南路一段33號</p>
