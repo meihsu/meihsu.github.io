@@ -55,7 +55,7 @@
             display: none;
         }
 
-        .navbar-nav  {
+        .navbar-nav {
             margin: 0 auto;
             display: inline-block;
         }
@@ -67,7 +67,7 @@
 
         .navbar-light .navbar-nav .nav-link {
             color: black;
-          
+
         }
 
         .min-logo {
@@ -113,17 +113,21 @@
             background-image: none;
         }
 
-        .swiper-button-prev,.swiper-button-next {
+        .swiper-button-prev,
+        .swiper-button-next {
             top: 50%;
             transform: translateY(-50%);
         }
-      
-        .swiper-button-prev > i,.swiper-button-next > i{
-            color:#ccc;
+
+        .swiper-button-prev>i,
+        .swiper-button-next>i {
+            color: #ccc;
         }
-        .swiper-pagination-bullet-active{
+
+        .swiper-pagination-bullet-active {
             background: white;
         }
+
         .bgc-img {
             height: 60vh;
             width: 100%;
@@ -162,8 +166,8 @@
             text-align: left;
         }
 
-       
-        #news > p{
+
+        #news>p {
             text-align: center;
             font-size: 21px;
         }
@@ -228,6 +232,8 @@
 
         .section3 p {
             line-height: 30px;
+            font-size: 18px;
+            margin: 30px auto;
         }
 
         .flowerclass h5 {
@@ -246,21 +252,16 @@
             font-size: 24px;
         }
 
-        /* 
-        .classcard {
-            padding: 20px 20px 30px 20px;
-            width: 80%;
-            border-radius: 5px;
-        } */
 
         .section4 {
             max-width: 1140px;
             margin: auto;
         }
 
-        .information {}
+        .section4 h3{
+           padding: 20px;
+        }
 
-        .googlemap {}
 
         .top {
             width: 100%;
@@ -329,6 +330,31 @@
         .card-img-top {
             border-radius: 3px;
         }
+
+        .section1::before {
+            content: "";
+            display: block;
+            height: 6rem;
+            margin-top: -6rem;
+            visibility: hidden;
+        }
+
+        .commodity::before {
+            content: "";
+            display: block;
+            height: 6rem;
+            margin-top: -6rem;
+            visibility: hidden;
+        }
+
+        .flowerclas::before {
+            content: "";
+            display: block;
+            height: 6rem;
+            margin-top: -6rem;
+            visibility: hidden;
+        }
+
 
         @media screen and (max-width:992px) {
             .min-logo {
@@ -789,7 +815,7 @@
                     <a href="https://www.instagram.com/trivium_botanics/" target="blank">
                         <i class="fab fa-instagram fa-2x"></i>
                     </a>
-                    <a href="https://www.facebook.com/flowerspace.art/?ref=page_internal">
+                    <a href="https://www.facebook.com/flowerspace.art/?ref=page_internal" target="blank">
                         <i class="fab fa-facebook-square fa-2x"></i>
                     </a>
                 </div>
@@ -844,6 +870,22 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
         });
     </script>
 
